@@ -1,5 +1,5 @@
 const snekfetch = require("snekfetch");
-const { IMGUR_KEY } = require("../settings.json");
+const { IMGUR_KEY } = process.env;
 
 class Util {
 
