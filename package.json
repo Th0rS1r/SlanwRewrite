@@ -1,0 +1,25 @@
+{
+  "name": "slawn",
+  "version": "0.0.4",
+  "description": "Um bot criado para o server CDB",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "author": "ZurgsKel#8140",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "discord.js": "^11.3.2",
+    "fs": "0.0.1-security",
+    "google-searcher": "^1.0.0",
+    "moment": "^2.21.0",
+    "ms": "^0.7.3",
+    "os": "^0.1.1",
+    "request": "^2.88.0",
+    "simple-youtube-api": "^5.0.2",
+    "snekfetch": "^3.6.4",
+    "xml2js": "^0.4.19"
+  }
+}
