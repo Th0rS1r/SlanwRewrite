@@ -1,6 +1,5 @@
 const chalk = require('chalk');
 const activities = require('../includes/json/activity');
-const settings = require("../settings.json");
 
 module.exports = client => { // eslint-disable-line no-unused-vars
 
@@ -11,6 +10,6 @@ module.exports = client => { // eslint-disable-line no-unused-vars
 		client.user.setActivity(activity.text, { type: activity.type });
 	}, 900000);*/
   //client.user.setStatus("idle");
-  client.user.setActivity(`${settings.prefix}help`, true);
+  client.user.setActivity(`${process.env.prefix}help`, true);
  
 };
