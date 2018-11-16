@@ -1,5 +1,5 @@
 
-exports.run = async (cliente, message, args) => {
+exports.run = async (cliente, msg, args) => {
 
     let botmessage = args.join(" ");
       msg.delete().catch();
