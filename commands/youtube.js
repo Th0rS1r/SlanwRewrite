@@ -33,7 +33,7 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
       console.error(err);
       return msg.channel.send(`🆘 Não encontrei nenhum resultado para \` ${search}\`.`);
 }
-     const fetched = await  msg.channel.fetchMessages({limit: 2});
+     const fetched = await  msg.channel.fetchMessages({limit: 3});
         msg.channel.bulkDelete(fetched);
      return msg.channel.send(`https://www.youtube.com/watch?v=${video.id}`);
     
