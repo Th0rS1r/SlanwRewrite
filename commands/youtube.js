@@ -23,6 +23,7 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
           });
       } catch (err) {
           console.error(err);
+          msg.channel.bulkDelete(2);
           return msg.channel.send('Nada digitado ou número inválido, cancelando a seleção de vídeo.');
       }
       const videoIndex = parseInt(response.first().content);
