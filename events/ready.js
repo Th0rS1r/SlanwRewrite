@@ -10,6 +10,6 @@ module.exports = client => { // eslint-disable-line no-unused-vars
 		client.user.setActivity(activity.text, { type: activity.type });
 	}, 3600000);*/
   //client.user.setStatus("idle");
-  //client.user.setActivity(`${process.env.prefix}help`, true);
+  client.user.setActivity(`${process.env.prefix}help`, true);
  
 };
