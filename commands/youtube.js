@@ -24,7 +24,8 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
       } catch (err) {
           console.error(err);
           //msg.delete().catch();
-         return m.edit('Nada digitado ou número inválido, cancelando a seleção de vídeo.');
+          m.edit('Nada digitado ou número inválido, cancelando a seleção de vídeo.');
+          return;
       }
       const videoIndex = parseInt(response.first().content);
       var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
