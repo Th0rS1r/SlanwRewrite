@@ -33,8 +33,9 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
       console.error(err);
       return msg.channel.send(`🆘 Não encontrei nenhum resultado para \` ${search}\`.`);
 }
-     msg.delete().catch();
-  return  msg.channel.send(`https://www.youtube.com/watch?v=${video.id}`);
+     msg.delete();
+     return msg.channel.send(`https://www.youtube.com/watch?v=${video.id}`);
+    
 };
 
 
