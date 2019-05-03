@@ -9,7 +9,7 @@ exports.run = async (client, msg, args) => {
     try {
       var videos = await youtube.searchVideos(search, 10);
       let index = 0;
-     var m = await msg.channel.send(`
+     msg.channel.send(`
 __**Seleção de Video:**__
 ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
 **Informe um numero entre** \`1-10\`.
@@ -23,9 +23,8 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
           });
       } catch (err) {
           console.error(err);
-          //msg.channel.bulkDelete(2);
-          m.edit('Nada digitado ou número inválido, cancelando a seleção de vídeo.');
-          //msg.channel.send
+          msg.delete().catch();
+          msg.channel.send('Nada digitado ou número inválido, cancelando a seleção de vídeo.');
       }
       const videoIndex = parseInt(response.first().content);
       var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
@@ -33,6 +32,7 @@ ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
       console.error(err);
       return msg.channel.send(`🆘 Não encontrei nenhum resultado para \` ${search}\`.`);
 }
+     msg.delete().catch();
   return  msg.channel.send(`https://www.youtube.com/watch?v=${video.id}`);
 };
 
