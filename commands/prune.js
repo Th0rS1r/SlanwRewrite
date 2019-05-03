@@ -5,7 +5,7 @@ exports.run = (client, msg, args) => {
 
                 if(isNaN(args[0])) 
                 {
-                   return msg.channel.send("Não use letras, use apenas numeros como seus argumentos \n Usage: :=prune <1-1000>");
+                   return msg.channel.send("Não use letras, use apenas numeros como seus argumentos \n Usage: +prune <1-1000>");
                 } else if(args[0] > 1000)
                 {
                     return msg.channel.send("O número é maior do que mil(1000)\nUsage: +prune <1-1000>");
