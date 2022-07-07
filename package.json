@@ -14,7 +14,7 @@
     "discord.js": "^11.3.2",
     "fs": "0.0.1-security",
     "google-searcher": "^1.0.0",
-    "moment": "^2.21.0",
+    "moment": "^2.29.4",
     "ms": "^0.7.3",
     "os": "^0.1.1",
     "request": "^2.88.0",
